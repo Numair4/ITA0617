@@ -1,0 +1,13 @@
+# EXPERIMENT 11 – CREDIT SCORE CLASSIFICATION
+
+from sklearn.tree import DecisionTreeClassifier
+
+X = [[500],[600],[700],[800]]
+y = ['Poor','Fair','Good','Excellent']
+
+model = DecisionTreeClassifier(random_state=42)
+
+model.fit(X, y)
+
+print("Credit Score Category:",
+      model.predict([[750]]))

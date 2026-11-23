@@ -1,0 +1,21 @@
+# EXPERIMENT 16 – CLASSIFICATION ALGORITHM COMPARISON
+
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+
+iris = load_iris()
+
+X = iris.data
+y = iris.target
+
+# Decision Tree
+dt = DecisionTreeClassifier(random_state=42)
+dt.fit(X, y)
+
+# KNN
+knn = KNeighborsClassifier()
+knn.fit(X, y)
+
+print("Decision Tree Accuracy:", dt.score(X, y))
+print("KNN Accuracy:", knn.score(X, y))

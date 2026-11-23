@@ -1,0 +1,13 @@
+# EXPERIMENT 19 – BANK LOAN PREDICTION
+
+from sklearn.naive_bayes import GaussianNB
+
+X = [[25],[35],[45],[55]]
+y = ['No','No','Yes','Yes']
+
+model = GaussianNB()
+
+model.fit(X, y)
+
+print("Loan Approval:",
+      model.predict([[50]]))

@@ -1,0 +1,18 @@
+# EXPERIMENT 12 – IRIS CLASSIFICATION USING KNN
+
+from sklearn.datasets import load_iris
+from sklearn.neighbors import KNeighborsClassifier
+
+iris = load_iris()
+
+X = iris.data
+y = iris.target
+
+model = KNeighborsClassifier()
+
+model.fit(X, y)
+
+prediction = model.predict([X[0]])
+
+print("Predicted Class:", prediction)
+print("Flower Name:", iris.target_names[prediction][0])

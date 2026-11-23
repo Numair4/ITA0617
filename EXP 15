@@ -1,0 +1,18 @@
+# EXPERIMENT 15 – IRIS CLASSIFICATION USING NAIVE BAYES
+
+from sklearn.datasets import load_iris
+from sklearn.naive_bayes import GaussianNB
+
+iris = load_iris()
+
+X = iris.data
+y = iris.target
+
+model = GaussianNB()
+
+model.fit(X, y)
+
+prediction = model.predict([X[0]])
+
+print("Predicted Class:", prediction)
+print("Flower Name:", iris.target_names[prediction][0])
